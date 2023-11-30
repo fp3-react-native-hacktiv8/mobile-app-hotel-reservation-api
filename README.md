@@ -18,8 +18,8 @@ Alra Hotels is a hotel booking application.
 ## Login
 
 ```
-Username : user@gmail.com
-Pass     : password123
+Username : hacktiv8@gmail.com
+Pass     : hacktiv8123
 ```
 
 ## 👨‍💻 Developed by
