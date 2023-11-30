@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
-const dummyEmail = "user@gmail.com";
-const dummyPassword = "password123";
+const dummyEmail = "hacktiv8@gmail.com";
+const dummyPassword = "hacktiv8123";
 
 export default useAuth = () => {
   const handleLogin = (email, password) => {
