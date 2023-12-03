@@ -47,7 +47,7 @@ export default Favorite = ({ navigation }) => {
         ) : (
           <View style={styles.containerNotFound}>
             <Image
-              source={require("../../../assets/favorite-not-found.png")}
+              source={require("../../../assets/favorite-not-found_.png")}
               style={styles.item}
             />
             <Text style={styles.textNotFound}>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   item: {
-    height: 200,
+    height: 300,
     borderTopLeftRadius: 7,
     borderTopRightRadius: 7,
     resizeMode: "contain",

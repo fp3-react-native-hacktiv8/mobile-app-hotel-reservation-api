@@ -1,19 +1,18 @@
-import {StyleSheet, ScrollView, View} from 'react-native';
-import {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import ItemFilter from './parts/item-filter';
-import ItemCard from '../../components/itemCard';
+import { StyleSheet, ScrollView, View, Text, Image } from "react-native";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import ItemFilter from "./parts/item-filter";
+import ItemCard from "../../components/itemCard";
 import http from "../../service/http";
 import dayjs from "dayjs";
-import {
-  SEARCH_HOTEL,
-  SEARCH_LOCATION,
-} from "../../service/api-path";
+import { SEARCH_HOTEL, SEARCH_LOCATION } from "../../service/api-path";
 import {
   ADD_FAVORITE_HOTEL,
   REMOVE_FAVORITE_HOTEL,
 } from "../../store/slicers/hotels";
 import useAuth from "../../libs/auth";
+import CardTopDesti from "./parts/CardTopDesti";
+import CardPopDesti from "./parts/CardPopDesti";
 
 const TODAY = dayjs().format("YYYY-MM-DD");
 const HOTEL = "HOTEL";
@@ -24,7 +23,7 @@ export default Home = ({ navigation }) => {
 
   const favoriteHotels = useSelector((state) => state.hotels.hotels.favorites);
 
-  const [inputCity, setInputCity] = useState("Yogyakarta");
+  const [inputCity, setInputCity] = useState("Jakarta");
   const [Date, setDate] = useState(TODAY);
   const [Tanggal, setTanggal] = useState(TODAY);
   const [hotels, setHotels] = useState([]);
@@ -105,7 +104,26 @@ export default Home = ({ navigation }) => {
         handleConfirmSearch={handleConfirmSearch}
         inputCity={inputCity}
       />
-      <View style={{ marginBottom: 20 }}>
+      <Text style={styles.texttpd}>Top Destination</Text>
+      <ScrollView
+        style={{ marginTop: 10, flexDirection: "row" }}
+        showsHorizontalScrollIndicator={false}
+        horizontal={true}
+      >
+        <CardTopDesti />
+      </ScrollView>
+
+      {/* <Text style={styles.texttpd}>Popular Destination</Text>
+      <ScrollView
+        style={{ marginTop: 10, flexDirection: "row" }}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
+        <CardPopDesti />
+      </ScrollView> */}
+
+      <Text style={styles.texttpd}>Hotels for You</Text>
+      <View style={{ marginTop: 10, marginBottom: 20 }}>
         {hotels &&
           hotels.map((hotel) => (
             <ItemCard
@@ -131,5 +149,10 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#e8e8e8",
     padding: 20,
+  },
+  texttpd: {
+    fontSize: 17,
+    fontWeight: "500",
+    marginTop: 10,
   },
 });
