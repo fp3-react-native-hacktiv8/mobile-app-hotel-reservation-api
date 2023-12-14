@@ -7,6 +7,7 @@ import Login from "./src/pages/login/login";
 import { Ionicons } from "@expo/vector-icons";
 import { Provider } from "react-redux";
 import { store } from "./src/store";
+import Splashscreen from "./src/pages/Splashscreen";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <HomeStack.Navigator
-          initialRouteName="Index"
+          initialRouteName="Splashscreen"
           screenOptions={{
             tabBarActiveTintColor: "royalblue",
             headerTintColor: "#fff",
@@ -24,6 +25,14 @@ export default function App() {
             },
           }}
         >
+          <HomeStack.Screen
+            name="Splashscreen"
+            component={Splashscreen}
+            options={() => ({
+              headerShown: false,
+            })}
+          />
+
           <HomeStack.Screen
             name="Index"
             component={IndexHome}
