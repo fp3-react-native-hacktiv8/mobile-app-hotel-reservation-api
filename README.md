@@ -2,9 +2,9 @@
 
 Alra Hotels is a hotel booking application.
 
-<!-- ## Preview
+## Preview
 
-![Designstripe_ Dual iPhone 14, Floating](https://user-images.githubusercontent.com/77148705/204692074-2f301031-b585-4109-8e3c-a5083cd6c43b.png) -->
+![AlraHotel](assets/alra.png)
 
 ## 🛠️ Tech Stack
 
