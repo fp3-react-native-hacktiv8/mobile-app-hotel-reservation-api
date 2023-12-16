@@ -4,7 +4,7 @@ Alra Hotels is a hotel booking application.
 
 ## Preview
 
-<img src="assets/alra.png" width="666">
+<img src="assets/alra.png" width="444">
 
 ## 🛠️ Tech Stack
 
