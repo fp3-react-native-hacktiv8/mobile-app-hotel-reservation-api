@@ -16,9 +16,9 @@ const Splashscreen = ({ navigation }) => {
       />
       <Image
         source={require("../../../assets/logo.png")}
-        style={{ width: 200, height: 200 }}
+        style={{ width: 175, height: 175 }}
       />
-      <Text style={styles.text}>ALRA HOTEL</Text>
+      <Text style={styles.text}>ALRA HOTELS</Text>
     </View>
   );
 };
