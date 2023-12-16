@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, View, Text, Image } from "react-native";
+import { StyleSheet, ScrollView, View, Text, StatusBar } from "react-native";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ItemFilter from "./parts/item-filter";
@@ -99,6 +99,11 @@ export default Home = ({ navigation }) => {
 
   return (
     <ScrollView style={styles.container}>
+      <StatusBar
+        barStyle="white-content"
+        translucent={true}
+        backgroundColor="transparent"
+      />
       <ItemFilter
         setInputCity={setInputCity}
         handleConfirmSearch={handleConfirmSearch}
@@ -110,7 +115,7 @@ export default Home = ({ navigation }) => {
         showsHorizontalScrollIndicator={false}
         horizontal={true}
       >
-        <CardTopDesti />
+        <CardTopDesti onSelectCity={setInputCity} />
       </ScrollView>
 
       {/* <Text style={styles.texttpd}>Popular Destination</Text>
